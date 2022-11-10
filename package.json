@@ -8,6 +8,7 @@
     "test": "tsc && node test",
     "release": "tsc && npm publish"
   },
+  "repository": "https://github.com/HtetLinMaung/generatesyskey.git",
   "keywords": [],
   "author": "",
   "license": "ISC",

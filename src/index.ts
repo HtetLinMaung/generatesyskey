@@ -1,6 +1,6 @@
 import { parse, v4 } from "uuid";
 
-export default function generateSyskey(bit: number = 64) {
+export default function generateSyskey(length = 17, bit: number = 64) {
   const parsedUuid: any = parse(v4());
   let buffer = Buffer.from(parsedUuid);
   let result = 0;
@@ -9,5 +9,5 @@ export default function generateSyskey(bit: number = 64) {
   } else {
     result = buffer[`readBigUInt${bit}BE`](0);
   }
-  return Number(result);
+  return parseInt(Number(result).toString().slice(0, length));
 }

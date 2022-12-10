@@ -1,1 +1,1 @@
-export default function generateSyskey(bit?: number): number;
+export default function generateSyskey(length?: number, bit?: number): number;

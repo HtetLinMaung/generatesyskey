@@ -1,9 +1,9 @@
 const { default: generateSyskey } = require("./index");
 
 const syskeylist = [];
-let n = 100000000;
+let n = 10000;
 for (let i = 0; i < n; i++) {
-  const syskey = generateSyskey();
+  const syskey = generateSyskey(17);
   syskeylist.push(syskey);
 
   const dataset = [...new Set(syskeylist)];

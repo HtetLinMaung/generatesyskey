@@ -17,7 +17,7 @@ npm install generate-syskey
 ```ts
 const { default: generateSyskey } = require("generate-syskey");
 
-generateSyskey(); // 5286016133796023000
+generateSyskey(); // 32867116102973696
 ```
 
 ## ES module Example
@@ -25,5 +25,5 @@ generateSyskey(); // 5286016133796023000
 ```ts
 import generateSyskey from "generate-syskey";
 
-generateSyskey(); // 5286016133796023000
+generateSyskey(); // 49703652524310744
 ```

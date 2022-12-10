@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const uuid_1 = require("uuid");
-function generateSyskey(bit = 64) {
+function generateSyskey(length = 17, bit = 64) {
     const parsedUuid = (0, uuid_1.parse)((0, uuid_1.v4)());
     let buffer = Buffer.from(parsedUuid);
     let result = 0;
@@ -11,6 +11,6 @@ function generateSyskey(bit = 64) {
     else {
         result = buffer[`readBigUInt${bit}BE`](0);
     }
-    return Number(result);
+    return parseInt(Number(result).toString().slice(0, length));
 }
 exports.default = generateSyskey;
